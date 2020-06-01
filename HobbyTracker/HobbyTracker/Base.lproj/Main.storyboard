@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-Bm-0Ta">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="dMC-jl-b0c">
@@ -167,6 +167,14 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iL2-mw-suk">
+                                <rect key="frame" x="0.0" y="759" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="6Kv-PV-g37"/>
+                                    <barButtonItem systemItem="flexibleSpace" id="7zz-ex-LKM"/>
+                                    <barButtonItem systemItem="save" id="uVA-mp-WC9"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -174,10 +182,13 @@
                             <constraint firstItem="ZPp-10-RWZ" firstAttribute="trailing" secondItem="arV-fB-pAI" secondAttribute="trailing" constant="16" id="DLJ-QN-mOJ"/>
                             <constraint firstItem="Vg7-t3-9hu" firstAttribute="leading" secondItem="ZPp-10-RWZ" secondAttribute="leading" constant="15" id="IA3-lQ-tAL"/>
                             <constraint firstItem="e5G-5U-zxg" firstAttribute="top" secondItem="WHh-ah-G77" secondAttribute="bottom" constant="42" id="MTo-Vm-PwK"/>
+                            <constraint firstItem="iL2-mw-suk" firstAttribute="leading" secondItem="ZPp-10-RWZ" secondAttribute="leading" id="Q0B-cZ-yCf"/>
                             <constraint firstItem="WHh-ah-G77" firstAttribute="top" secondItem="Vg7-t3-9hu" secondAttribute="bottom" constant="8" id="SOj-1v-OaV"/>
+                            <constraint firstItem="iL2-mw-suk" firstAttribute="trailing" secondItem="ZPp-10-RWZ" secondAttribute="trailing" id="Wrm-08-iHW"/>
                             <constraint firstItem="arV-fB-pAI" firstAttribute="leading" secondItem="ZPp-10-RWZ" secondAttribute="leading" constant="16" id="Y6Z-hu-1gr"/>
                             <constraint firstItem="e5G-5U-zxg" firstAttribute="leading" secondItem="Vg7-t3-9hu" secondAttribute="leading" id="awN-Iw-2aw"/>
                             <constraint firstItem="arV-fB-pAI" firstAttribute="top" secondItem="e5G-5U-zxg" secondAttribute="bottom" constant="30" id="b1C-Ws-MOX"/>
+                            <constraint firstItem="iL2-mw-suk" firstAttribute="bottom" secondItem="ZPp-10-RWZ" secondAttribute="bottom" id="cjk-eZ-5S3"/>
                             <constraint firstItem="ZPp-10-RWZ" firstAttribute="trailing" secondItem="WHh-ah-G77" secondAttribute="trailing" constant="15" id="cyb-6e-ZDL"/>
                             <constraint firstItem="Vg7-t3-9hu" firstAttribute="top" secondItem="jt3-Rh-lRR" secondAttribute="topMargin" constant="43" id="xWU-h6-cOR"/>
                         </constraints>
