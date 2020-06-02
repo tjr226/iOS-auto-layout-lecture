@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22DFA61A248520F600EDD5E8 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DFA619248520F600EDD5E8 /* FriendsTableViewController.swift */; };
+		22DFA61C2485224000EDD5E8 /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DFA61B2485224000EDD5E8 /* AddFriendsViewController.swift */; };
+		22DFA61E2485227300EDD5E8 /* FriendsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DFA61D2485227300EDD5E8 /* FriendsDetailViewController.swift */; };
+		22DFA6222485231600EDD5E8 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DFA6212485231600EDD5E8 /* FriendTableViewCell.swift */; };
+		22DFA625248536A000EDD5E8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DFA624248536A000EDD5E8 /* Friend.swift */; };
 		22EF645D24829A5500173CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EF645C24829A5500173CD4 /* AppDelegate.swift */; };
 		22EF645F24829A5500173CD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EF645E24829A5500173CD4 /* SceneDelegate.swift */; };
 		22EF646124829A5500173CD4 /* HobbyTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EF646024829A5500173CD4 /* HobbyTrackerViewController.swift */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22DFA619248520F600EDD5E8 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		22DFA61B2485224000EDD5E8 /* AddFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
+		22DFA61D2485227300EDD5E8 /* FriendsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDetailViewController.swift; sourceTree = "<group>"; };
+		22DFA6212485231600EDD5E8 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		22DFA624248536A000EDD5E8 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		22EF645924829A5500173CD4 /* HobbyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EF645C24829A5500173CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22EF645E24829A5500173CD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +47,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22DFA6202485229400EDD5E8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				22DFA61B2485224000EDD5E8 /* AddFriendsViewController.swift */,
+				22DFA61D2485227300EDD5E8 /* FriendsDetailViewController.swift */,
+				22DFA619248520F600EDD5E8 /* FriendsTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		22DFA6232485238000EDD5E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22DFA6212485231600EDD5E8 /* FriendTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		22DFA626248536B200EDD5E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22DFA624248536A000EDD5E8 /* Friend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		22EF645024829A5500173CD4 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +92,13 @@
 		22EF645B24829A5500173CD4 /* HobbyTracker */ = {
 			isa = PBXGroup;
 			children = (
+				22DFA626248536B200EDD5E8 /* Model */,
 				22EF645C24829A5500173CD4 /* AppDelegate.swift */,
 				22EF645E24829A5500173CD4 /* SceneDelegate.swift */,
 				22EF646024829A5500173CD4 /* HobbyTrackerViewController.swift */,
 				22EF646224829A5500173CD4 /* Main.storyboard */,
+				22DFA6232485238000EDD5E8 /* Views */,
+				22DFA6202485229400EDD5E8 /* ViewControllers */,
 				22EF646524829A5600173CD4 /* Assets.xcassets */,
 				22EF646724829A5600173CD4 /* LaunchScreen.storyboard */,
 				22EF646A24829A5600173CD4 /* Info.plist */,
@@ -139,8 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				22EF646124829A5500173CD4 /* HobbyTrackerViewController.swift in Sources */,
+				22DFA61C2485224000EDD5E8 /* AddFriendsViewController.swift in Sources */,
 				22EF645D24829A5500173CD4 /* AppDelegate.swift in Sources */,
+				22DFA61A248520F600EDD5E8 /* FriendsTableViewController.swift in Sources */,
 				22EF645F24829A5500173CD4 /* SceneDelegate.swift in Sources */,
+				22DFA61E2485227300EDD5E8 /* FriendsDetailViewController.swift in Sources */,
+				22DFA6222485231600EDD5E8 /* FriendTableViewCell.swift in Sources */,
+				22DFA625248536A000EDD5E8 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

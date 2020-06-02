@@ -10,7 +10,7 @@
         <!--Hobby Tracker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Hobby Tracker" id="BYZ-38-t0r" customClass="HobbyTrackerViewController" customModule="HobbyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Hobby Tracker" id="BYZ-38-t0r" customClass="FriendsTableViewController" customModule="HobbyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="dMC-jl-b0c">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="80" id="dMC-jl-b0c" customClass="FriendTableViewCell" customModule="HobbyTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dMC-jl-b0c" id="F1h-Wa-5vS">
@@ -62,7 +62,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="f4t-eY-rOZ" kind="show" id="l4S-nv-R5o"/>
+                                            <outlet property="hometownLabel" destination="3LP-t8-hOt" id="9n6-XF-iKS"/>
+                                            <outlet property="nameLabel" destination="hQ1-6f-UvE" id="5Iq-sW-jqx"/>
+                                            <outlet property="numberOfHobbiesLabel" destination="SR9-xV-h4l" id="yQ5-aS-6yy"/>
+                                            <segue destination="f4t-eY-rOZ" kind="show" identifier="ShowFriendDetailSegue" id="l4S-nv-R5o"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -71,28 +74,28 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nzj-Bm-0Ta" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6J6-0E-sqt"/>
+                            <constraint firstItem="nzj-Bm-0Ta" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Djg-qt-jNO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nzj-Bm-0Ta" secondAttribute="bottom" id="Z18-kg-T2e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nzj-Bm-0Ta" secondAttribute="trailing" id="c0y-1y-NOe"/>
-                            <constraint firstItem="nzj-Bm-0Ta" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dSw-od-XE8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Hobby Tracker" id="ISE-0n-phm">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Ewa-UR-Zzu">
+                    <navigationItem key="navigationItem" title="Hobby Tracker" id="WzC-cl-bq5">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="vj4-7h-16Q">
                             <connections>
-                                <segue destination="Dx1-e8-pTM" kind="presentation" id="86M-SV-wSm"/>
+                                <segue destination="Dx1-e8-pTM" kind="presentation" identifier="AddFriendModalSegue" id="f8Q-AE-aQW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="nzj-Bm-0Ta" id="scJ-SI-fD3"/>
+                        <outlet property="tableView" destination="nzj-Bm-0Ta" id="rXx-lD-iyS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.75" y="127.8169014084507"/>
+            <point key="canvasLocation" x="1127.536231884058" y="127.23214285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wcj-Ct-qxp">
@@ -112,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="131.25" y="127.8169014084507"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Friends View Controller-->
         <scene sceneID="fo9-rD-FEO">
             <objects>
-                <viewController id="Dx1-e8-pTM" sceneMemberID="viewController">
+                <viewController id="Dx1-e8-pTM" customClass="AddFriendsViewController" customModule="HobbyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jt3-Rh-lRR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,11 +171,19 @@
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iL2-mw-suk">
-                                <rect key="frame" x="0.0" y="759" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="705" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="6Kv-PV-g37"/>
+                                    <barButtonItem systemItem="cancel" id="6Kv-PV-g37">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="Dx1-e8-pTM" id="14W-So-IkZ"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="7zz-ex-LKM"/>
-                                    <barButtonItem systemItem="save" id="uVA-mp-WC9"/>
+                                    <barButtonItem systemItem="save" id="uVA-mp-WC9">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="Dx1-e8-pTM" id="J4e-MN-NGr"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -194,15 +205,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZPp-10-RWZ"/>
                     </view>
+                    <connections>
+                        <outlet property="hobbyOneTextField" destination="dLq-2U-Lm3" id="1As-N5-W5W"/>
+                        <outlet property="hobbyThreeTextField" destination="dRs-fv-QDl" id="gKS-PR-nDk"/>
+                        <outlet property="hobbyTwoTextField" destination="wWD-Jo-JRZ" id="q2c-Ja-OXW"/>
+                        <outlet property="hometownTextField" destination="6El-6y-oIb" id="LX9-FB-9IS"/>
+                        <outlet property="nameTextField" destination="DTa-U7-UOt" id="rQc-hY-g6I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9P-BK-UCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2093" y="-217"/>
         </scene>
-        <!--View Controller-->
+        <!--Friends Detail View Controller-->
         <scene sceneID="oOU-Yx-6ya">
             <objects>
-                <viewController id="f4t-eY-rOZ" sceneMemberID="viewController">
+                <viewController id="f4t-eY-rOZ" customClass="FriendsDetailViewController" customModule="HobbyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cRE-Ec-r4E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,6 +287,11 @@
                         <viewLayoutGuide key="safeArea" id="GRI-zT-nL6"/>
                     </view>
                     <navigationItem key="navigationItem" id="caE-yP-4Qr"/>
+                    <connections>
+                        <outlet property="hobbyListTextView" destination="cGM-pM-ugI" id="1R3-my-0nN"/>
+                        <outlet property="hometownLabel" destination="IMx-He-ePC" id="x9x-zg-G40"/>
+                        <outlet property="nameLabel" destination="fSb-WV-Hpb" id="OtF-0e-G6o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SnP-Tk-olI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
